@@ -1,0 +1,20 @@
+.card__container {
+  width: 100%;
+
+  @apply flex flex-row mt-8;
+}
+
+.card__row {
+  @apply flex flex-row;
+}
+
+.card {
+  width: 100%;
+
+  @apply flex flex-col content-center mr-2;
+
+  h5 {
+    width: 100%;
+    @apply font-sans tracking-wide text-lg;
+  }
+}

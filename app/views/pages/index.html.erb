@@ -1,0 +1,28 @@
+<div class="section">
+  <h1 class="main-heading">Artists</h1>
+  <div class="card__container">
+    <% @artists.each do |artist| %>
+    <div class="card">
+      <%= image_tag artist.image_url, class: "avatar-circle avatar-4xl" %>
+      <h5 class="text-center"><%= artist.name %></h5>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="section">
+  <h2 class="heading">Albums: <span><%= @artists.first.name %></span></h2>
+  <div class="card__container">
+    <% @albums.each do |album| %>
+      <div class="card__row">
+        <div>
+          <div class="card">
+            <%= image_tag album.image_url, class: "avatar-lg" %>
+          </div>
+        </div>
+        <div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

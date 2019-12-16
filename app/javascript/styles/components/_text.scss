@@ -1,0 +1,11 @@
+.main-heading {
+  display: inline;
+
+  @apply font-sans font-bold tracking-wide text-4xl mb-16 border-blue-600 border-solid border-b-8;
+}
+
+.heading {
+  display: inline;
+
+  @apply font-sans font-bold tracking-wide text-2xl mb-16;
+}

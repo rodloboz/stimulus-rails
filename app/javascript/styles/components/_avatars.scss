@@ -1,0 +1,17 @@
+.avatar-circle {
+  @apply border rounded-full flex items-center justify-center mr-2 bg-gray-400;
+}
+
+.avatar-xs {
+  @apply h-10 w-10;
+}
+
+.avatar-lg {
+  @apply h-32 w-32;
+}
+
+.avatar-4xl {
+  @apply h-40 w-40;
+
+  font-size: 6rem;
+}
