@@ -1,12 +1,20 @@
 <div class="section">
   <h1 class="main-heading">Artists</h1>
-  <div class="card__container">
-    <% @artists.each do |artist| %>
-    <div class="card">
-      <%= image_tag artist.image_url, class: "avatar-circle avatar-4xl" %>
-      <h5 class="text-center"><%= artist.name %></h5>
+  <div class="card__slider" data-controller="slider">
+    <div class="card__container" data-target="slider.container">
+      <% @artists.each do |artist| %>
+        <div class="card">
+          <%= image_tag artist.image_url, class: "avatar-circle avatar-4xl" %>
+          <h5 class="text-center"><%= artist.name %></h5>
+        </div>
+      <% end %>
     </div>
-    <% end %>
+    <div class="chevron chevron-right" data-action="click->slider#next">
+      <i class="fas fa-chevron-right"></i>
+    </div>
+    <div class="chevron chevron-left" data-action="click->slider#prev">
+      <i class="fas fa-chevron-left"></i>
+    </div>
   </div>
 </div>
 

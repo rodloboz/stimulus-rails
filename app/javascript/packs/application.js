@@ -4,9 +4,12 @@
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
 import 'styles/application.scss';
-import 'vendor';
 import 'channels';
+import 'vendor';
+
+import '@fortawesome/fontawesome-free/js/all';
 
 document.addEventListener('turbolinks:load', () => {
   console.log('Hello from webpacker!')
