@@ -4,7 +4,7 @@
     <div class="card__container">
       <% @artists.each do |artist| %>
         <div class="card">
-          <%= image_tag artist.image_url, class: "avatar-circle avatar-4xl" %>
+          <%= image_tag artist.image_url, class: "avatar-circle avatar-4xl avatar-grow" %>
           <h5 class="text-center"><%= artist.name %></h5>
         </div>
       <% end %>
