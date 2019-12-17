@@ -1,36 +1,37 @@
-<div class="section">
-  <h1 class="main-heading">Artists</h1>
-  <div class="card__slider" data-controller="slider">
-    <div class="card__container" data-target="slider.container">
-      <% @artists.each do |artist| %>
-        <div class="card">
-          <%= image_tag artist.image_url, class: "avatar-circle avatar-4xl" %>
-          <h5 class="text-center"><%= artist.name %></h5>
-        </div>
-      <% end %>
-    </div>
-    <div class="chevron chevron-right" data-action="click->slider#next">
-      <i class="fas fa-chevron-right"></i>
-    </div>
-    <div class="chevron chevron-left" data-action="click->slider#prev">
-      <i class="fas fa-chevron-left"></i>
-    </div>
-  </div>
-</div>
+<div data-controller="albums-loader"
+     data-albums-loader-url="<%= albums_path %>"
+>
 
-<div class="section">
-  <h2 class="heading">Albums: <span><%= @artists.first.name %></span></h2>
-  <div class="card__container">
-    <% @albums.each do |album| %>
-      <div class="card__row">
-        <div>
+  <div class="section">
+    <h1 class="main-heading">Artists</h1>
+    <div class="card__slider" data-controller="slider">
+      <div class="card__container" data-target="slider.container">
+        <% @artists.each do |artist| %>
           <div class="card">
-            <%= image_tag album.image_url, class: "avatar-lg" %>
+            <%= image_tag artist.image_url,
+                          class: 'avatar-circle avatar-4xl avatar-grow',
+                          data: {
+                            id: artist.id,
+                            target: 'albums-loader.artist',
+                            action: 'click->albums-loader#load'
+                          }
+            %>
+            <h5 class="text-center"><%= artist.name %></h5>
           </div>
-        </div>
-        <div>
-        </div>
+        <% end %>
       </div>
-    <% end %>
+      <div class="chevron chevron-right" data-action="click->slider#next">
+        <i class="fas fa-chevron-right"></i>
+      </div>
+      <div class="chevron chevron-left" data-action="click->slider#prev">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+    </div>
   </div>
+
+  <div class="section">
+    <h2 class="heading">Albums: <span><%= @artists.first.name %></span></h2>
+    <div class="card__container" data-target="albums-loader.container"></div>
+  </div>
+
 </div>

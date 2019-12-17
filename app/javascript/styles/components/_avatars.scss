@@ -1,5 +1,5 @@
 .avatar-circle {
-  @apply border rounded-full flex items-center justify-center mr-2 bg-gray-400;
+  @apply border rounded-full flex items-center justify-center bg-gray-400;
 }
 
 .avatar-xs {
@@ -14,4 +14,13 @@
   @apply h-40 w-40;
 
   font-size: 6rem;
+}
+
+.avatar-grow:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.avatar-active {
+  @apply border-blue-600 border-solid border-b-2;
 }

@@ -13,8 +13,12 @@
 
   @apply flex flex-col content-center mr-2;
 
+  img {
+    margin: 0 auto;
+  }
+
   h5 {
     width: 100%;
-    @apply font-sans tracking-wide text-lg;
+    @apply font-sans tracking-wide text-lg mt-2;
   }
 }
