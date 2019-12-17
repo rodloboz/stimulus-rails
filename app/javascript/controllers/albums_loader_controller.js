@@ -1,7 +1,7 @@
 import { Controller } from 'stimulus';
 
 export default class extends Controller {
-  static targets = [ 'artist', 'container' ]
+  static targets = [ 'artist', 'artistName', 'container' ]
 
   connect() {
     this.id = this.artists[0].dataset.id;
@@ -15,9 +15,10 @@ export default class extends Controller {
 
   fetchAlbums() {
     fetch(this.url)
-      .then(response => response.text())
-      .then(html => {
-        this.containerTarget.innerHTML = html;
+      .then(response => response.json())
+      .then(({albums, artist}) => {
+        this.artistNameTarget.innerHTML = artist
+        this.containerTarget.innerHTML = albums.join('');
       });
   }
 
