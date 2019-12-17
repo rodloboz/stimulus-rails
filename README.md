@@ -4,4 +4,4 @@ This is the repo of a small [tutorial](http://bit.ly/stimulus-rails) aimed at in
 
 ## Demo
 
-A live demo is available at: https://stimulus-rails-tutorial.herokuapp.com/
+A live demo is available at: https://stimulus-rails-tutorial.herokuapp.com
