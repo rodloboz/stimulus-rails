@@ -1,6 +1,6 @@
 # Rails App built with Rails, Turbolinks, Stimulus and Tailwindcss
 
-This is the repo of a small [tutorial](http://bit.ly/stimulus-rails) aimed at introducing StimulsJs. It's build on Rails 6 with Turbolinks and Tailwindcss.
+This is the repo of a small [tutorial](http://bit.ly/stimulus-rails) aimed at introducing StimulsJs. It's built on Rails 6 with Turbolinks and Tailwindcss.
 
 ## Demo
 
