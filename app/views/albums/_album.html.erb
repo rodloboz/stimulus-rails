@@ -1,5 +1,7 @@
 <div class="card__row">
-  <div class="card">
+  <div class="card"
+       data-controller="tooltip"
+       data-tooltip-content="<%= album.title %>">
     <%= image_tag album.image_url, class: "avatar-lg" %>
   </div>
 </div>
